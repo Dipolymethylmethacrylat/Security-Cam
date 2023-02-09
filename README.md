@@ -1,5 +1,4 @@
 # Security-Cam
 A HTL-Kapfenberg Project 
 
-We want V-Bucks
-And PeePee
+Aufgabe von CPE freies Project
