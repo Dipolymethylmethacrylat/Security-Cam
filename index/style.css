@@ -10,3 +10,10 @@
 h{
     font-size: 100px;
 }
+
+.background{
+    background-color: rgb(88, 88, 88);
+    background-image: url();
+    background-repeat: repeat-y;
+    position: fixed;
+}
