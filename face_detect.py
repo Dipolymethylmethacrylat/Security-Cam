@@ -1,10 +1,7 @@
 import cv2
 from random import randrange
 
-#klassifiziert die Daten der Gesichter
 face_data = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-
-#img = cv2.imread('brad.jpg')
 
 camera = cv2.VideoCapture(0)
 
@@ -25,7 +22,9 @@ while True:
     key = cv2.waitKey(1)
 
     if key == 81 or key == 113:
-        break
+        break  
+
+
 camera.release()
 
 
