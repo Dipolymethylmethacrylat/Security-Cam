@@ -1,11 +1,15 @@
 *{
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.center{
-    display: flex;
-    justify-content: center;
+
 }
 
+.center{
+
+    display: flex;
+    justify-content: center;
+
+}
 
 h{
     
@@ -18,26 +22,30 @@ h{
     background-image: url();
     background-repeat: no-repeat;
     position: fixed;
+
 }   
 
 .backgroundcamerapage{
 
     position: sticky;
     background-image: url();
+
 }
 
 .backgroundmainpage{
+
     background-color: rgb(189, 189, 189);
     background-image: url();
     background-repeat: repeat-y;
     position: fixed;
+
 }
 
-
-
 body{
+
     opacity: 0;
     transition: opacity 0.5s;
+
 }
 
 
