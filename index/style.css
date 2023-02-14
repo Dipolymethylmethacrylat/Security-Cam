@@ -1,19 +1,50 @@
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .center{
     display: flex;
     justify-content: center;
 }
 
+
 h{
+    
     font-size: 100px;
+
 }
 
-.background{
-    background-color: rgb(88, 88, 88);
+.backgrounddocpage{
+
+    background-image: url();
+    background-repeat: no-repeat;
+    position: fixed;
+}   
+
+.backgroundcamerapage{
+
+    position: sticky;
+    background-image: url();
+}
+
+.backgroundmainpage{
+    background-color: rgb(189, 189, 189);
     background-image: url();
     background-repeat: repeat-y;
     position: fixed;
 }
+
+
+
+body{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+body.loaded{
+
+    opacity: 1;
+
+
+}
+
