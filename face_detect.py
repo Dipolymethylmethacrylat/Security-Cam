@@ -1,6 +1,9 @@
 import cv2
 from random import randrange
 
+i = 0
+
+#face_data = cv2.CascadeClassifier('haarcascade_frontalface_extended.xml')
 face_data = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 camera = cv2.VideoCapture(0)
@@ -16,7 +19,12 @@ while True:
     #src, coordinates, color, thickness
     for ((x, y, w, h)) in face_coord:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (randrange(128, 255), randrange(128, 255), randrange(128, 255)), 5)
-        print(face_coord)
+        i = 0
+        if(str(face_coord.all) > str(0)):
+            i = i + 1
+        print(i)
+        #print(face_coord)
+
 
     cv2.imshow('Cool', frame)
     key = cv2.waitKey(1)
