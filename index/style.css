@@ -21,15 +21,15 @@ h{
 
     background-image: url();
     background-repeat: no-repeat;
-    position: fixed;
+    position: fixed;    
 
 }   
 
 .backgroundcamerapage{
 
-    position: sticky;
+    background-repeat: no-repeat;
     background-image: url();
-
+    position: fixed;
 }
 
 .backgroundmainpage{
@@ -42,7 +42,7 @@ h{
 }
 
 body{
-
+    
     opacity: 0;
     transition: opacity 0.5s;
 
