@@ -27,9 +27,11 @@ h{
 
 .backgroundcamerapage{
 
+    background-size: auto;
     background-repeat: no-repeat;
-    background-image: url();
+    background-image: url(images/dentix.jpg);
     position: fixed;
+
 }
 
 .backgroundmainpage{
