@@ -34,6 +34,10 @@ h{
 
 }
 
+img:hover {
+    opacity: 0.5;
+}
+
 .backgroundmainpage{
 
     background-color: rgb(189, 189, 189);
@@ -57,4 +61,3 @@ body.loaded{
 
 
 }
-
