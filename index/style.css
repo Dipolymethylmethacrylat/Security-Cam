@@ -38,14 +38,15 @@ img:hover {
     opacity: 0.5;
 }
 
-.backgroundmainpage{
+/*.backgroundmainpage{
 
     background-color: rgb(189, 189, 189);
     background-image: url();
     background-repeat: repeat-y;
     position: fixed;
 
-}
+        
+}*/
 
 body{
     
@@ -61,3 +62,29 @@ body.loaded{
 
 
 }
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #000000;
+    margin: 0%;
+    padding: 0%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    margin: 0%;
+  }
+  
+  li a:hover {
+    color: #bebebe;
+    text-decoration-line: underline;
+  }
