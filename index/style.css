@@ -5,7 +5,7 @@
 }
 
 .center{
-
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
     justify-content: center;
 
@@ -43,13 +43,13 @@ img:hover {
     background-color: rgb(189, 189, 189);
     background-image: url();
     background-repeat: repeat-y;
-    position: fixed;
+    position: fixed; nm
 
         
 }*/
 
 body{
-    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     opacity: 0;
     transition: opacity 0.5s;
 
