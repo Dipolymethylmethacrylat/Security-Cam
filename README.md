@@ -1,5 +1,4 @@
 # Security-Cam
 A HTL-Kapfenberg Project 
 
-We want V-Bucks
-And PeePee
+This Branch is merged with WebUI and PythonAI so it is testable for finishing the application
