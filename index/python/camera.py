@@ -5,9 +5,9 @@ from random import randrange
 
 face_data = cv2.CascadeClassifier('trained_data/haarcascade_frontalface_default.xml')
 
-i = 0
 video = cv2.VideoCapture(0)
 app = Flask('__name__')
+i = 0
 
 
 
@@ -24,7 +24,6 @@ def video_stream():
 
             for ((x, y, w, h)) in face_coord:
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (randrange(128, 255), randrange(128, 255), randrange(128, 255)), 5)
-                i = 0
                 if(str(face_coord.all) > str(0)):
                    i = i + 1
                    print(i)
