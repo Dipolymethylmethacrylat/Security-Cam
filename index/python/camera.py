@@ -3,7 +3,7 @@ import numpy
 from flask import Flask, render_template, Response, stream_with_context, request
 from random import randrange
 
-face_data = cv2.CascadeClassifier('trained_data/haarcascade_frontalface_default.xml')
+face_data = cv2.CascadeClassifier('trained_data/haarcascade_frontalface_extended.xml')
 
 video = cv2.VideoCapture(0)
 app = Flask('__name__')
