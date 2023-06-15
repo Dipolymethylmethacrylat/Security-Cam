@@ -1,4 +1,2 @@
 # Security-Cam
 A HTL-Kapfenberg Project 
-
-UwU
