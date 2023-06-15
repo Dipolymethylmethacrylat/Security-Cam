@@ -5,48 +5,27 @@
 }
 
 .center{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
     justify-content: center;
 
 }
 
-h{
-    
-    font-size: 100px;
-
-}
-
-.backgrounddocpage{
-
-    background-image: url();
-    background-repeat: no-repeat;
-    position: fixed;    
-
-}   
-
-.backgroundcamerapage{
-
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-image: url(images/dentix.jpg);
-    position: fixed;
-
+.center2{
+    text-align: center;
 }
 
 img:hover {
     opacity: 0.5;
 }
 
-/*.backgroundmainpage{
+.backgroundpage{
 
-    background-color: rgb(189, 189, 189);
-    background-image: url();
+    background-color: rgb(26, 216, 213);
     background-repeat: repeat-y;
-    position: fixed; nm
-
-        
-}*/
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+}
 
 body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic-Tac-Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .board {
+            display: inline-block;
+        }
+
+        .board button {
+            width: 80px;
+            height: 80px;
+            font-size: 30px;
+            margin: 5px;
+            position: relative;
+            transition: top 0.2s ease-in-out;
+        }
+
+        .board button.clicked {
+            top: -5px;
+        }
+
+        .message {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div class="board">
+        <button onclick="makeMove(0, 0)"></button>
+        <button onclick="makeMove(0, 1)"></button>
+        <button onclick="makeMove(0, 2)"></button>
+        <br>
+        <button onclick="makeMove(1, 0)"></button>
+        <button onclick="makeMove(1, 1)"></button>
+        <button onclick="makeMove(1, 2)"></button>
+        <br>
+        <button onclick="makeMove(2, 0)"></button>
+        <button onclick="makeMove(2, 1)"></button>
+        <button onclick="makeMove(2, 2)"></button>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <script>
+        var board = [[null, null, null], [null, null, null], [null, null, null]];
+        var currentPlayer = 'X';
+        var moves = 0;
+        var messageElem = document.getElementById('message');
+
+        function makeMove(row, col) {
+            var button = document.getElementsByTagName('button')[row * 3 + col];
+            if (!button.classList.contains('clicked') && board[row][col] === null) {
+                board[row][col] = currentPlayer;
+                button.innerText = currentPlayer;
+                button.classList.add('clicked');
+
+                if (checkWin()) {
+                    if (currentPlayer === 'X') {
+                        messageElem.innerText = currentPlayer + ' wins!';
+                        disableButtons();
+                        setTimeout(function() {
+                            window.location.href = 'real.html';
+                        }, 1000);
+                    } else {
+                        messageElem.innerText = currentPlayer + ' wins!';
+                        disableButtons();
+                    }
+                } else if (moves === 8) {
+                    messageElem.innerText = 'It\'s a tie!';
+                } else {
+                    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                    moves++;
+                    if (currentPlayer === 'O') {
+                        setTimeout(makeBotMove, 500); // Delay bot move for 500ms
+                    }
+                }
+            }
+        }
+
+        function makeBotMove() {
+            var emptyCells = [];
+            for (var i = 0; i < 3; i++) {
+                for (var j = 0; j < 3; j++) {
+                    if (board[i][j] === null) {
+                        emptyCells.push({ row: i, col: j });
+                    }
+                }
+            }
+
+            var randomIndex = Math.floor(Math.random() * emptyCells.length);
+            var botMove = emptyCells[randomIndex];
+            makeMove(botMove.row, botMove.col);
+        }
+
+        function checkWin() {
+            var winningCombinations = [
+                [[0, 0], [0, 1], [0, 2]],
+                [[1, 0], [1, 1], [1, 2]],
+                [[2, 0], [2, 1], [2, 2]],
+                [[0, 0], [1, 0], [2, 0]],
+                [[0, 1], [1, 1], [2, 1]],
+                [[0, 2], [1, 2], [2, 2]],
+                [[0, 0], [1, 1], [2, 2]],
+                [[0, 2], [1, 1], [2, 0]]
+            ];
+
+            for (var i = 0; i < winningCombinations.length; i++) {
+                var combo = winningCombinations[i];
+                var [a, b, c] = combo;
+
+                if (board[a[0]][a[1]] !== null &&
+                    board[a[0]][a[1]] === board[b[0]][b[1]] &&
+                    board[a[0]][a[1]] === board[c[0]][c[1]]) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        function disableButtons() {
+            var buttons = document.getElementsByTagName('button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>

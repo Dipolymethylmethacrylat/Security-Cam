@@ -2,15 +2,15 @@
 
 <html>
 
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/png" href="../images/pageicon.jpg"/>
-
     <script> 
-    
+
         window.onload =function() {
         document.body.classList.add('loaded');};
-
+            
     </script>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../images/index.jpg"/>
 
     <head>
 
@@ -20,17 +20,18 @@
 
     </head>
 
-    <body class="backgroundcamerapage">
-
-        <h1 class="center">
+    <body class="backgroundpage">
         
-            <a href="javascript:history.back()">
-                
-                Go Back
+        <ul>
+            
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="camerasite.html">Camera</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+        </ul>
 
-            </a>
-        
-        </h1>
+        <div class="center">
+            <img id="bg" src="{{ url_for('video_feed') }}" style="width:70%;">
+        </div>
 
     </body>
 
