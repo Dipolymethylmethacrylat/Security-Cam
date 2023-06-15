@@ -1,4 +1,4 @@
 # Security-Cam
 A HTL-Kapfenberg Project 
 
-This Branch is merged with WebUI and PythonAI so it is testable for finishing the application
+This is the Facerecognision python application built for our electron app to be discoverable.
