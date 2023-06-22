@@ -2,15 +2,24 @@
 
 <html>
 
+<!--
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" type="image/png" href="../../images/420_icon.jpg"/>
+-->
     <script> 
-
+    
         window.onload =function() {
         document.body.classList.add('loaded');};
-            
+
     </script>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="../images/index.jpg"/>
+    <style>
+        .center{
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
 
     <head>
 
@@ -20,19 +29,22 @@
 
     </head>
 
-    <body class="backgroundpage">
-        
-        <ul>
-            
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="camerasite.html">Camera</a></li>
-            <li><a href="documentation.html">Documentation</a></li>
-        </ul>
+    <body >
 
-        <div class="center">
+        <h1 class="center">
+        
+            <a href="#" onclick="window.location.href = window.history.back(1);">
+                <i>
+                    Back
+                </i>
+            </a>
+        
+        </h1>
+
+        <div>
             <img id="bg" src="{{ url_for('video_feed') }}" style="width:70%;">
         </div>
-
+        
     </body>
 
 </html>
