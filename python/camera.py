@@ -4,7 +4,7 @@ from flask import Flask, render_template, Response, stream_with_context, request
 from random import randrange
 
 face_data = cv2.CascadeClassifier('trained_data/haarcascade_frontalface_default.xml')
-
+y5
 video = cv2.VideoCapture(0)
 app = Flask('__name__')
 i = 0
@@ -24,9 +24,6 @@ def video_stream():
 
             for ((x, y, w, h)) in face_coord:
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (randrange(128, 255), randrange(128, 255), randrange(128, 255)), 5)
-                if(str(face_coord.all) > str(0)):
-                   i = i + 1
-                   print(i)
 
             ret, buffer = cv2.imencode('.jpeg',frame)
             frame = buffer.tobytes()
