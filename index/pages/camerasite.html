@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 
-<html>
-
-    <script> 
-
-        window.onload =function() {
-        document.body.classList.add('loaded');};
-            
-    </script>
-
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="../images/index.jpg"/>
 
     <head>
-
         <title>
-            Security Camera - Camera
+            Hii
         </title>
-
     </head>
 
     <body class="backgroundpage">
-        
+
         <ul>
-            
+
             <li><a href="../index.html">Home</a></li>
             <li><a href="camerasite.html">Camera</a></li>
             <li><a href="documentation.html">Documentation</a></li>
         </ul>
 
-        <div class="center">
-            <img id="bg" src="{{ url_for('video_feed') }}" style="width:70%;">
+        <div class="center2" style="margin-top: 10%;">
+            <label style="font-size: 150%;">Your camera site:</label> <br>
+            <input type="url" id="userInput">
+            <button onclick="func()"> Submit </button>    
         </div>
 
     </body>
 
-</html>
+    <script>
+
+        window.onload =function() {
+        document.body.classList.add('loaded');};
+
+
+        function func(){
+
+            let userInput = document.querySelector("#userInput");
+            
+            window.location.assign("http://" + userInput.value);
+
+        }
+
+    </script>
