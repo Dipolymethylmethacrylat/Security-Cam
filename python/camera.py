@@ -4,7 +4,7 @@ from flask import Flask, render_template, Response, stream_with_context, request
 from random import randrange
 
 face_data = cv2.CascadeClassifier('trained_data/haarcascade_frontalface_default.xml')
-video = cv2.VideoCapture(0)
+video = cv2.VideoCapture(1) #Note, change the value to the webcam setting (0 is the general output of video(this might be different for different systems))
 app = Flask('__name__')
 i = 0
 
