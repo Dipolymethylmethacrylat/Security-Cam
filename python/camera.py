@@ -29,7 +29,7 @@ def video_stream():
             yield (b' --frame\r\n' b'Content-type: imgae/jpeg\r\n\r\n' + frame +b'\r\n')
 
 
-@app.route('/camera')
+@app.route('/cam')
 def camera():
     return render_template('camera.html')
 
@@ -39,4 +39,4 @@ def video_feed():
     return Response(video_stream(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
-app.run(host='0.0.0.0', port='5000', debug=False)
+app.run(host='0.0.0.0', port='50', debug=False)
